@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask2</title>
+</head>
+<body>
+    <script>
+        function charSort( word)
+        {
+            let charArray = word.split('');
+            charArray.sort();
+            let sortedword = charArray.join("");
+            return sortedword;
+        }
+        let str =prompt("Enter the string to be sorted\n");
+      console.log("letters in alphabetical order are  "+str+" is");
+      console.log(charSort(str));
+    </script>
+</body>
+</html>

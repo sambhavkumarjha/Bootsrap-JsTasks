@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask8</title>
+    <style>
+         
+    table{
+        /* display: flex; */
+        /* margin: auto; 
+        align-items: center;*/
+        /* margin-left: 450px; */
+        
+    } 
+    h1
+    {
+        font-size: 1.5rem;
+        color: blue;
+        text-align: center;
+        margin-left:-180px ;
+    }
+    .hjk
+    {
+        text-align: center;
+    }
+    /* table,th,td
+    {
+        border: 1px solid black;
+        /* border: 1px; 
+    } */
+    tr{
+        margin-bottom: 20px ;
+        padding-bottom: 20px ;
+    }
+    .button
+    {
+       display: flex;
+       align-items: center;
+       text-align: center;
+       position: relative;
+       margin-top: 40px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .para
+    {
+        text-align: right;
+        margin-bottom: 0px;
+    }
+    #First_Name,#lastname,#email,#password,#Re_Password,#Age,#phone,#Address,#State
+    {
+        width: 100%;
+    }
+    /* #country */
+    select
+    {
+        margin-left: -130px;
+    }
+    .error
+    {
+        color: red;
+        font-size: 9px;
+    }
+    #registration
+    {
+        background-image: linear-gradient(rgba(255, 255, 0, 0.354), violet);
+        margin-left: 300px;
+        width: 60%;
+        align-items: center;
+    }
+    #agr
+    {
+        margin-top: 30px;
+        margin-left: 30px;
+        accent-color: blue;
+    }
+    #agr
+    {
+        background-color: blue;
+    }
+    a{
+        color: blue;
+    }
+   #eng,#kan,#hin,#tel
+    {
+        accent-color: blue;
+    }
+    #Male,#Female
+    {
+        accent-color: blue;
+    }
+    #Register
+    {
+        border: 3px solid black;
+        border-radius: 10px;
+        color: white;
+        background-color: red;
+        width: 10%;
+        text-align: center;
+    }
+    .in
+    {
+        display: flex;
+        align-items: center;
+    }
+</style>
+</head>
+<body>
+   
+<div class="container">
+
+<form  id="registration">
+    <h1>Registration form</h1>
+    
+<table class="hj1">
+    <tr>
+<th><label for="First Name" class="hjk">First Name</label></th>
+
+<th>
+    <div class="in">
+    <input  type="text" placeholder="" id="First_Name"/>
+    <span class="error" id="fname-error"></span>
+    </div>
+</th>
+</tr>
+<tr>
+<th><label for="Last Name"  class="hjk">Last Name</label></th>
+<th>
+    <div class="in">
+    <input type="text" placeholder="" id="lastname"/> 
+     <span class="error" id="lname-error"></span>
+     </div>
+</th>
+
+</tr>
+<tr>
+<th><label for="email" class="hjk">Email</label></th>
+<th>
+    <div class="in">
+    <input  type="email" placeholder="" id="email"/>
+    <span class="error" id="email-error"></span>
+    </div>
+</th>
+</tr>
+<tr>
+<th> <label for="Password" class="hjk">Password</label></th>
+<th>
+    <div class="in">
+    <input type="password" placeholder="" id="password"/>
+    <span class="error" id="password-error"></span> 
+    </div>   
+</th>
+</tr>
+<tr>
+<th><label for="Re Password" class="hjk">Re-enter Password</label></th>
+<th>
+    <div class="in">
+    <input type="password" placeholder="" id="Re_Password"/>
+    <span class="error" id="rpass-error"></span>
+    </div>
+</th>
+</tr>
+<tr>
+<th><label for="Gender" class="hjk">Gender:</label></th>
+<td>
+    <input type="radio" id="Male"/>
+    <label for="Male">Male</label>
+<br/>
+<input type="radio" id="Female"/>
+<label for="Female">Female</label>
+
+
+</td>
+</tr>
+<tr>
+<th> <label for="Age" class="hjk">Age:</label></th>
+<th>
+    <div class="in">
+    <input type="text" placeholder="" id="Age"/>
+    <span class="error" id="age-error"></span>
+</div>
+</th>
+</tr>
+<tr>
+<th> <label for="Phone" class="hjk">Phone Number</label></th>
+<th>
+    <div class="in">
+    <input type="text" placeholder="" id="phone"/>
+    <span class="error" id="phone-error"></span>
+    </div>
+</th>
+</tr>
+<tr>
+<th><label for="Address" class="hjk">Address:</label></th>
+<th>
+    <div class="in">
+     <textarea name="Address" id="Address" cols="30" rows="5"></textarea>
+    <span class="error" id="address-error"></span>
+    </div>
+ </th>
+ </tr>
+ <tr>
+<th> <label for="State" class="hjk">State</label></th>
+<th>
+    <div class="in">
+    <input type="text" placeholder="" id="State"/> 
+    <span class="error" id="state-error"></span>
+    </div>
+</th>
+</tr>
+<tr>
+<th><label for="Country" class="hjk">Country</label></th>
+<th><select name="Country" id="country">
+    <option value="Choose your country">Choose your country</option>
+</select>
+
+</th>
+</tr>
+<tr>
+<th><label for="lang" class="hjk">Languages known</label></th>
+<td><input type="checkbox" placeholder="" id="eng"/>English 
+<input type="checkbox" placeholder="" id="kan"/>Kannada 
+<input type="checkbox" placeholder="" id="hin"/>Hindi 
+<input type="checkbox" placeholder="" id="tel"/>Telugu</td>
+</tr>
+<tr>
+<td><input type="checkbox" placeholder="" id="agr"/>Hereby I declare all the given details are true </td>
+</tr>
+<tr>
+    <td></td>
+<td><p class="para">Log in to <a href="#">Ethnus</a> website</p></td>
+</tr>
+</table>
+<input class="button" type="submit" placeholder="Register" id="Register" value="REGISTER" /> <br/><br/>
+</form>
+</div>
+<script>
+let form = document.getElementById("registration");
+form.addEventListener("submit",function(e)
+{
+    e.preventDefault();
+    let fname=document.getElementById("First_Name").value;
+    let fnameerror=document.getElementById("fname-error");
+    let lname=document.getElementById("lastname").value;
+    let lnameerror=document.getElementById("lname-error");
+    let email=document.getElementById("email").value;
+    let emailerror=document.getElementById("email-error");
+    let password=document.getElementById("password").value;
+    let passworderror=document.getElementById("password-error");
+    let rpass=document.getElementById("Re_Password").value;
+    let rpasserror=document.getElementById("rpass-error");
+    let age=document.getElementById("Age").value;
+    let ageerror =document.getElementById("age-error") ;
+    let phone=document.getElementById("phone").value;
+    let phoneerror=document.getElementById("phone-error");
+    let address=document.getElementById("Address").value;
+    let addresserror=document.getElementById("address-error");
+    let state=document.getElementById("State").value;
+    let stateerror=document.getElementById("state-error");
+
+    if (fname === "") {
+        
+        fnameerror.textContent = "POOR";
+      } 
+    if (lname === "") {
+        
+        lnameerror.textContent = "POOR";
+      } 
+    if (email === "") {
+        
+        emailerror.textContent = "POOR";
+      } 
+    if (password === "") {
+        
+        passworderror.textContent = "POOR";
+      } 
+    if (rpass === "") {
+        
+        rpasserror.textContent = "POOR OR MISMATCH";
+      } 
+    if (rpass != password) {
+        
+        rpasserror.textContent = "POOR OR MISMATCH";
+      } 
+    if (address === "") {
+        
+        addresserror.textContent = "POOR";
+      } 
+    if (age === "") {
+        
+        ageerror.textContent = "POOR";
+      } 
+    if (phone === "") {
+        
+        phoneerror.textContent = "POOR";
+      } 
+    if (state === "") {
+        
+        stateerror.textContent = "POOR";
+      } 
+      
+    // if (fname === "") {
+        
+    //     fnameerror.textContent = "POOR";
+    //   } 
+
+});
+</script>
+</body>
+</html>

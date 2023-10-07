@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask1</title>
+</head>
+<body>
+    <script>
+        function reverse(a) {
+            let result =0;
+            while(a!=0)
+            {
+            let r=a%10;
+                result=result*10+r;
+                a=Math.floor(a/10);
+                // console.log(a);
+            }
+            return result;
+      }
+      let number =prompt("Enter the number to be reversed\n");
+      console.log("Reverse of the given number  "+number+" is");
+      console.log(reverse(number));
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask5</title>
+    <style>
+        .error
+        {
+            color: red;
+        }
+        #form
+        {
+            padding: 20px;
+            margin: 10px;
+        }
+        input
+        {
+            margin-left: 9px;
+            margin-bottom: 12px;
+        }
+        .container
+        {
+            display: flex;
+            align-items: first baseline;
+            
+        }
+        #w
+        {
+            margin-left: -12px;
+        }
+        #m
+        {
+            margin-left: -9px;
+            padding-right: 7px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <label for="name" id="n">Name:</label>
+        <input type="text" name="" id="name" required>
+        <span class="error"id="name-error"></span>
+        <br>
+        <label for="name" id="e">Email:</label>
+        <input type="email" name="" id="email" required>
+        <span class="error"id="email-error"></span>
+        <br>
+        <label for="name" id="w">Website:</label>
+        <input type="url" name="" id="website" required>
+        <span class="error"id="url-error"></span>
+        <br>
+        <div class="container">
+        <label for="name" id="m">Message:</label>
+        <textarea name="message" id="message" cols="30" rows="5" required></textarea>
+        <span class="error"id="message-error"></span>
+        </div>
+        
+        <br>
+        <button type="button"  id="sub">Submit</button>
+    </form>
+    <script>
+        const form = document.getElementById("form");
+        const nameinput = document.getElementById("name");
+        
+        const nameerror = document.getElementById("name-error");
+        const emailinput = document.getElementById("email");
+        
+        const emailerror = document.getElementById("email-error");
+        const webinput = document.getElementById("website");
+        
+        const weberror = document.getElementById("url-error");
+        const messageinput = document.getElementById("message");
+        
+        const messageerror = document.getElementById("message-error");
+        const sub =document.getElementById("sub");
+        sub.addEventListener("click",function(){
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const web = document.getElementById("website").value.trim();
+            const message = document.getElementById("message").value.trim();
+            if (name === "")
+            {
+                nameinput.style.borderColor = "red";
+                nameerror.textContent = "This field is required";
+            }
+             if (email==="")
+            {
+                emailinput.style.borderColor = "red";
+                emailerror.textContent = "This field is required";
+                emailerror.textContent.color="red";
+            }
+             if (web==="")
+            {
+                webinput.style.borderColor = "red";
+                weberror.textContent = "This field is required";
+            }
+             if (message==="")
+            {
+                messageinput.style.borderColor = "red";
+                messageerror.textContent = "This field is required";
+            }
+            
+           
+            event.defaultPrevented();
+        });
+        // function submit()
+        // {
+        //     if (name=="")
+        //     {
+        //         nameinput.style.borderColor = "red";
+        //         nameError.textContent = "This field is required";
+        //     }
+        //     if (email=="")
+        //     {
+        //         emailinput.style.borderColor = "red";
+        //         emailError.textContent = "This field is required";
+        //     }
+        //     if (web=="")
+        //     {
+        //         webinput.style.borderColor = "red";
+        //         webError.textContent = "This field is required";
+        //     }
+        //     if (message=="")
+        //     {
+        //         messageinput.style.borderColor = "red";
+        //         messageError.textContent = "This field is required";
+        //     }
+        // }
+
+    </script>
+</body>
+</body>
+</html>

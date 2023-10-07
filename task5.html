@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+    <title>Task 5</title>
+    <style>
+        form{
+            background-color: lightgrey;
+        }
+        /*
+        .input-group
+        {
+            padding-left: 40px;
+        }*/
+        #firstname
+        {
+            width:20%;
+           
+        }
+        #lastname
+        {
+            width:20%;
+            
+        }
+        #email
+        {
+            width:20%;
+            
+        }
+        #address
+        {
+            width:20%;
+            
+        }
+        #state
+        {
+            width:20%;
+            
+        }
+        #phone
+        {
+            width:20%;
+            
+        }
+        #city
+        {
+            width:20%;
+            
+        }
+        /* #yes
+        {
+          
+            margin-left: 30px;
+        }
+       #no
+       {
+            margin-left: 30px;
+       }*/
+        i 
+        {
+            height: 30%;
+        }
+        
+        button
+        {
+            border: 1px solid white;
+            height: 30px;
+            /* width: 40%;
+          margin-left: 15000px; */
+        }
+       /*
+        .pl
+        {
+            margin-left:-160px;
+            text-align:left ;
+        } */
+        #tr
+        {
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        .sub
+        {
+          background-color: orange;
+          width: 5%;
+          margin-left: 193px;
+          height:55%;
+        }
+        .btnt
+        {
+          margin-left: -25px;
+          color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="/action_page.php" class="was-validated">
+        <div class="input-group mb-3 ">
+         
+            <label for="first" style="margin-left: 193px;  margin-right:-214px;" class="form-label form-check-label">First Name</label>
+          <span class="input-group-addon" id="icn"><i class="glyphicon glyphicon-user"></i></span>
+          <input id="firstname" type="text" class="form-control is-invalid"  name="firstname" placeholder="First Name" aria-describedby="icn" required/>
+          
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please supply your first name</div>
+         </div>
+        
+        <div class="input-group mb-3">
+            <label for="last" class="form-label" style="margin-left: 193px;margin-right:-213px;">Last Name</label>
+          <span class="input-group-addon form-check is-invalid"><i class=" glyphicon glyphicon-user"></i></span>
+          <input id="lastname" type="Text" class="form-control is-invalid" name="lastname" placeholder="Last Name" required>
+          <div class="invalid-feedback">Please supply your last name</div>
+        </div>
+        <div class="input-group mb-3">
+            <label for="email" class="form-label" style="margin-left: 193px; margin-right:-212px;padding-right: 32px;">Email</label>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+          <input id="email" type="email" class="form-control is-invalid" name="email" placeholder="Email" required>
+          <div class="invalid-feedback">Please supply your email address</div>
+        </div>
+        <div class="input-group mb-3">
+            <label for="phone" class="form-label" style="margin-left: 209px;margin-right:-213px;">Phone #</label>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-earphone" ></i></span>
+          <input id="phone" type="text" class="form-control is-invalid" name="phone" placeholder="(845)555-1212" required>
+          <div class="invalid-feedback">Please supply your phone number </div>
+        </div>
+        <div class="input-group mb-3">
+            <label for="address" class="form-label" style="margin-left: 208px;margin-right:-214px;">Address</label>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+          <input id="address" type="text" class="form-control is-invalid" name="address" placeholder="Address" required>
+          <div class="invalid-feedback">Please supply your street address</div>
+        </div>
+        <div class="input-group mb-3">
+            <label for="city" class="form-label" style="margin-left: 237px;margin-right:-213px;">City</label>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+          <input id="city" type="text" class="form-control is-invalid" name="city" placeholder="city" required>
+          <div class="invalid-feedback">Please supply your city</div>
+        </div>
+        <div class="input-group mb-3">
+            <label for="state" class="form-label" style="margin-left: 229px;margin-right:-205px;">State</label>
+          <span class="input-group-addon"><i class=" st glyphicon glyphicon-list"></i></span>
+         <button class="bg-white px-5"><span class="pl">Please select your state </span> <i class=" bt glyphicon glyphicon-menu-down"></i></button>
+        </div>
+        <div class="input-group mb-3" id="tr">
+            <label for="radio" class="form-label" style="margin-left: 193px;">Do you have hosting?</label>
+            <div class="container">
+         <input type="radio" id="yes"> Yes
+         <br>
+         <input type="radio" id="no"> No
+         </div>
+        </div>
+        <div class="input-group mb-3" id="tr">
+            <label for="project" class="form-label" style="margin-left: 185px; padding-right: 45px;">Project Description</label>
+          <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
+         <textarea name="Project" id="project" cols="30" rows="3" placeholder="Project Description"></textarea>
+        </div>
+        <!-- <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon">Text</span>
+          <input id="msg" type="text" class="form-control" name="msg" placeholder="Additional Info">
+        </div> -->
+        
+        <button type="submit" class="btn  px-5 sub" > <span class="btnt">Send <i class="glyphicon glyphicon glyphicon-send"></i> </span></button>
+      </form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask7</title>
+   
+    <style>
+       
+.animation-container {
+    text-align: center;
+    margin: 20px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+
+.animated-sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url('Screenshot 2023-10-06 210236.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+   
+    <div class="animation-container">
+        <div class="animated-sprite" id="animated-sprite"></div>
+    </div>
+    <h1>Click the following buttons to handle the animation</h1>
+    <button id="startButton">Start</button>
+    <button id="stopButton">Stop</button>
+    <script >
+        document.addEventListener("DOMContentLoaded", function () {
+    let startButton = document.getElementById("startButton");
+    let stopButton = document.getElementById("stopButton");
+    let animatedSprite = document.getElementById("animated-sprite");
+    let animationInterval;
+
+    
+    let spriteWidth = 100; 
+    let spriteHeight = 100; 
+    let totalFrames = 10; 
+    let currentFrame = 0;
+
+   
+    function startAnimation() {
+        animationInterval = setInterval(function () {
+            currentFrame = (currentFrame + 1) % totalFrames;
+            let backgroundPositionX = -currentFrame * spriteWidth;
+            animatedSprite.style.backgroundPositionX = `${backgroundPositionX}px`;
+        }, 100); 
+    }
+
+    
+    function stopAnimation() {
+        clearInterval(animationInterval);
+    }
+
+   
+    startButton.addEventListener("click", startAnimation);
+    stopButton.addEventListener("click", stopAnimation);
+});
+
+    </script>
+</body>
+</html>

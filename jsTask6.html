@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask6</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        .login-container
+        {
+            margin: 280px;
+            align-items: center;
+           background-color: rgba(211, 211, 211, 0.324);
+           width: 30%;
+           height: 45vh;
+           margin-right: 1720px;
+        }
+        #login{
+            /* margin: 75px; */
+            margin-left:60px;
+            margin-bottom:-90px
+        }
+        .input-group-addon
+        {
+            width: min-content;
+        }
+        #name
+        {
+            height:45px;
+            width: 298px;
+            padding: 10px;
+        }
+        #password
+        {
+            height:45px;
+            width: 298px;
+            padding: 10px;
+        }
+        #head
+        {
+            margin-top: 25px;
+            font-style: italic;
+            text-align: center;
+            margin-left: -50px;
+            margin-bottom: 25px;
+            font-size: 6vh;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+        }
+        .footer
+        {
+            margin-left: 350px;
+            margin-top: -270px;
+        }
+        button
+        {
+            width: 340px;
+            height: 45px;
+            background-color: blue;
+            color: white;
+            border: 1px solid blue;
+        }
+        .bt
+        {
+            display: flex;
+            align-items: center;
+            /* padding-left: 20px; */
+        }
+        .ch{
+            margin-right: 80px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form action="" id="login">
+            <h1 id="head">Instagram</h1>
+            <div class="input-group ">
+            <span class="input-group-addon" id="icn"><i class="glyphicon glyphicon-user"></i></span>
+            <input type="text" id="name" placeholder="Username" required>
+        </div>
+            <br>
+            <div class="input-group mb-3">
+            <span class="input-group-addon" id="icp"><i class="glyphicon glyphicon-lock"></i></span>
+            <input type="password" id="password" class="px-5" placeholder=" Password" required>
+    </div>
+            <br>
+            <button >Log in</button>
+            <br>
+            <div class="bt">
+                <div class="ch">
+            <input type="checkbox" id="check" required>
+            <label for="ch" id="option">Remember me</label>
+            </div>
+            <a href="#"><span id="link">Forgot Password?</span></a>
+                </div>
+        </form>
+    </div>
+    <p class="footer">Don't have an account! <a href="#" id="sign">Sign up here</a></p>
+    <script>
+       
+        document.getElementById("login").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let username = document.getElementById("name").value;
+            let password = document.getElementById("password").value;
+            alert(`Username: ${username}\nPassword: ${password}`);
+        });
+
+    </script>
+</body>
+</html>

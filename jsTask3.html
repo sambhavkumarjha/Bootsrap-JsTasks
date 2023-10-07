@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jstask3</title>
+    <style>
+        form{
+            border: 1px solid black;
+            width: 40%;
+        }
+        button:hover
+        {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <form  id="calculator">
+        <label for="num1">1st Number:</label>
+        <input type="number" id="num1" required>
+        <br>
+        <label for="num2">2nd Number:</label>
+        <input type="number" id="num2" required>
+        <br>
+        <button onclick="mul()">Multiply</button>
+        <button onclick="div()">Divide</button>
+        <br>
+        <h5 id="res"></h5>
+    </form>
+    <script>
+        
+        function mul()
+        {
+            let n1= parseFloat(document.getElementById("num1").value);
+           let n2= parseFloat(document.getElementById("num2").value);
+
+            if (!isNaN(n1) && !isNaN(n2)) {
+                let result = n1 * n2;
+                document.getElementById("res").textContent = `The Result Is: \n ${result}`;
+                
+                
+              
+            } else {
+                document.getElementById("res").textContent = "Invalid input. Please enter valid numbers.";
+            }
+            event.preventDefault();
+        }
+        function div()
+        {
+            let n1= parseFloat(document.getElementById("num1").value);
+            let n2= parseFloat(document.getElementById("num2").value);
+
+            if (!isNaN(n1) && !isNaN(n2)) {
+                let result = n1 / n2;
+                document.getElementById("res").textContent = `The Result Is:\n${result}`;
+                
+               
+            } else {
+                document.getElementById("res").textContent = "Invalid input. Please enter valid numbers.";
+            }
+            event.preventDefault();
+        }
+        event.preventDefault();
+    </script>
+</body>
+</html>
